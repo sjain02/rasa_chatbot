@@ -29,14 +29,13 @@ intents:
  - greet
  - affirm
  - deny
- - goodbyes
+ - goodbye
  - restaurant_search
  - send_email
  - budget
  - location
  - cuisine
- - reenter_cuisine
- - reenter_location
+ - default
 
 templates:
   utter_greet:
@@ -53,10 +52,12 @@ templates:
     - "okie"
     - "yeah"
     - "yes"
+    - "dosend"
   utter_deny:
     - "no"
     - "nope"
-    - "nah"  
+    - "nah" 
+    - "notnow" 
   utter_default:
     - "Sorry I didn't follow that!"
     - "I didn't get that!"
@@ -66,17 +67,17 @@ templates:
     - text: "What kind of cuisine would you like?"
       buttons:
       - title: "Chinese"
-        payload: "Chinese"
+        payload: 'Chinese'
       - title: "Italian"
-        payload: "Italian"
+        payload: 'Italian'
       - title: "South Indian"
-        payload: "South Indian"
+        payload: 'South Indian'
       - title: "North Indian"
-        payload: "North Indian"
+        payload: 'North Indian'
       - title: "American"
-        payload: "American"
+        payload: 'American'
       - title: "Mexican"
-        payload: "Mexican"
+        payload: 'Mexican'
   utter_ask_howcanhelp:
     - "How can I help you?"
   utter_ask_location:
@@ -93,10 +94,10 @@ templates:
   utter_get_email_confirmation:
       - text: "May I send top 10 restaurant list to your email?"
         buttons:
-        - title: "Yes"
-          payload: "yes"
-        - title: "No"
-          payload: "No"
+        - title: "Do Send"
+          payload: "dosend"
+        - title: "Not now"
+          payload: "notnow"
   utter_ask_send_email:
     - text: "Please provide an email id!"
   utter_email_not_sent:
@@ -107,12 +108,15 @@ templates:
     - text: "Provide one of the only mentioned cuisines"
   utter_ask_reenter_location:
     - text: "We don't operate in this location, please provide another location"
+  utter_restart:
+    - text: ''
 
 actions:
 - utter_greet
 - utter_goodbye
 - utter_default
 - utter_deny
+- utter_restart
 - utter_affirm
 - utter_ask_howcanhelp
 - utter_ask_location
@@ -122,5 +126,4 @@ actions:
 - utter_get_email_confirmation
 - actions.ActionSearchRestaurants
 - actions.ActionSendEmail
-- actions.ActionValidateCuisine
-- actions.ActionValidateLocation
+- actions.ActionGoodBye
