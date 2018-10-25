@@ -6,7 +6,7 @@ app=Flask(__name__)
 
 def create_app():
     app = Flask(__name__)
-    app.config.update(DEBUG=True,MAIL_SERVER='smtp.gmail.com',MAIL_PORT=465,MAIL_USE_SSL=True,MAIL_USERNAME='botatservice@gmail.com',MAIL_PASSWORD='abcde@12345')
+    app.config.update(DEBUG=True,MAIL_SERVER='smtp.gmail.com',MAIL_PORT=465,MAIL_USE_SSL=True,MAIL_USERNAME='botatservice@gmail.com',MAIL_PASSWORD='')
     return app
 
 def send_mail(msg_sub,msg_body,msg_list,mail_to,render_html=False):

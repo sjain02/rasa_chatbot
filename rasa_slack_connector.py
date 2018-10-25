@@ -127,14 +127,6 @@ class SlackInput(HttpInputComponent):
 								'id'))
 
 			return make_response()
-		# def receive():
-		# 	payload = request.json
-		# 	sender_id = payload.get("sender", None)
-		# 	text = payload.get("message", None)
-		# 	out = CollectingOutputChannel()
-		# 	on_new_message(UserMessage(text, out, sender_id))
-		# 	responses = [m for _, m in out.messages]
-		# 	return jsonify(responses)
 
 		@slack_webhook.route('/slack/events', methods = ['POST'])
 		def event():
