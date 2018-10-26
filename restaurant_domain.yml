@@ -62,7 +62,7 @@ templates:
     - "Sorry I didn't follow that!"
     - "I didn't get that!"
   utter_noService:
-    - "Sorry! We do not operate in that area yet"
+    - "Sorry! We do not operate in that area yet. Please enter new location."
   utter_ask_cuisine: 
     - text: "What kind of cuisine would you like?"
       buttons:

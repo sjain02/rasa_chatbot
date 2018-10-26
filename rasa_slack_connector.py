@@ -125,7 +125,6 @@ class SlackInput(HttpInputComponent):
 							sender_id=json.loads(
 									output['payload'][0]).get('user').get(
 								'id'))
-
 			return make_response()
 
 		@slack_webhook.route('/slack/events', methods = ['POST'])
@@ -135,7 +134,6 @@ class SlackInput(HttpInputComponent):
 				
 			if request.json.get('token') == self.slack_client and request.json.get('type') == 'event_callback':
 				data = request.json
-				# logger.log("INFO",data)
 				messaging_events = data.get('event')
 				self.channel = messaging_events.get('channel')
 				user = messaging_events.get('user')

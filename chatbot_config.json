@@ -3,7 +3,7 @@
     "slack":{
         "app_ver_token":"",
         "bot_ver_token":"",
-        "slack_ver_token":""
+        "slack_ver_token":"***"
     }
     
   }

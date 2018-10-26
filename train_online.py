@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 def run_restaurant_online(input_channel, interpreter,
                           domain_file="restaurant_domain.yml",
                           training_data_file='./data/core_stories.md'):
-    # fallback = FallbackPolicy(fallback_action_name="action_default_fallback", core_threshold=0.001,nlu_threshold=0.001)
     agent = Agent(domain_file,
                   policies=[MemoizationPolicy(), KerasPolicy()],
                   interpreter=interpreter)

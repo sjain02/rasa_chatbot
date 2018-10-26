@@ -10,7 +10,6 @@ def create_app():
     return app
 
 def send_mail(msg_sub,msg_body,msg_list,mail_to,render_html=False):
-# msg = Message('test subject', sender='botatservice@gmail.com', recipients='jpr.saurabh@gmail.com')
     app=create_app()
     with app.app_context():
         mail=Mail(app)
