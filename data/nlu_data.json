@@ -1159,6 +1159,66 @@
         "entities": []
       },
       {
+        "text": "1200",
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "1200",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "100",
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "100",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "700",
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "150",
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "150",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "550",
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "550",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
         "text": "in what location",
         "intent": "restaurant_search",
         "entities": []
@@ -2050,6 +2110,11 @@
       },
       {
         "text": "movie",
+        "intent": "default",
+        "entities": []
+      },
+      {
+        "text": "movies",
         "intent": "default",
         "entities": []
       },
@@ -4172,6 +4237,10 @@
       {
         "name": "zipcode",
         "pattern": "[0-9]{6}"
+      },
+      {
+        "name": "restaurant_search",
+        "pattern": "((?i)(restaurant|restaurants|eat|food|dine|lunch))"
       }
     ],
     "entity_synonyms": [

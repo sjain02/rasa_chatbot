@@ -34,6 +34,9 @@ class ActionSearchRestaurants(Action):
                         elif cuisine==None:
                                 dispatcher.utter_template('utter_ask_cuisine',tracker)
                                 return [SlotSet('location',tracker.get_slot('location'))]
+                else:
+                        dispatcher.utter_template('utter_ask_location',tracker)
+                        return [SlotSet('location',loc),SlotSet('cuisine',cuisine),SlotSet('budget',budget)]
                 if cuisine!=None:
                         if Validation_Utilities().ValidateCuisine(dispatcher,tracker)==False:
                                 dispatcher.utter_template('utter_ask_cuisine',tracker)
@@ -41,7 +44,13 @@ class ActionSearchRestaurants(Action):
                         elif budget==None:
                                 dispatcher.utter_template('utter_ask_budget',tracker)
                                 return [SlotSet('cuisine',tracker.get_slot('cuisine'))]
-                if cuisine!=None and loc!=None:
+                else:
+                        dispatcher.utter_template('utter_ask_cuisine',tracker)
+                        return [SlotSet('location',loc),SlotSet('cuisine',cuisine),SlotSet('budget',budget)]
+                if budget==None:
+                        dispatcher.utter_template('utter_ask_budget',tracker)
+                        return [SlotSet('location',loc),SlotSet('cuisine',cuisine),SlotSet('budget',budget)]
+                if cuisine!=None and loc!=None and budget!=None:
                         
                         location_detail=zomato.get_location(loc, 1)                
                         d1 = json.loads(location_detail)
@@ -64,9 +73,10 @@ class ActionSearchRestaurants(Action):
                                 tracker.update(SlotSet('cuisine_key',cuisine_key))
                         except ValueError as e:
                                 dispatcher.utter_message("Sorry! not able to find cuisine {} restaurant. Please choose another cuisine".format(cuisine))
+                                dispatcher.utter_template('utter_ask_cuisine',tracker)
+                                return [SlotSet('cuisine',None)]
                         if cuisine_key!='':       
                                 results=zomato.restaurant_search("", lat, lon, cuisine_key, 10)
-                                        
                                 d = json.loads(results)
                                 api_response="{"
                                 response=""
@@ -87,7 +97,7 @@ class ActionSearchRestaurants(Action):
                                 return [SlotSet('location',loc),SlotSet('api_response',api_response),SlotSet('budget',budget),SlotSet('cuisine',cuisine)]
                         else:
                                 dispatcher.utter_template('utter_ask_cuisine',tracker)
-                                return [SlotSet('location',loc),SlotSet('cuisine',None)]
+                                return [SlotSet('location',loc),SlotSet('cuisine',None),SlotSet('budget',budget)]
         
 class ActionGoodBye(Action):
         def name(self):
@@ -100,18 +110,25 @@ class ActionSendEmail(Action):
                 return 'action_send_email'
 
         def run(self, dispatcher, tracker, domain):
+                response="No Success"
                 email_id=tracker.get_slot('email')
                 sendermail=str(email_id).split('|')[-1]
                 email_id=sendermail
                 cuisine_id=tracker.get_slot('cuisine')
                 location_id=tracker.get_slot('location')
+                response_var=str(tracker.get_slot('api_response'))
+                filtered_text=response_var
+                replace_expression=["'","\n","\t","\s"]
+                for replacement in replace_expression:
+                        filtered_text=filtered_text.replace(replacement," ")
+                response_var=filtered_text
                 render_html=True
                 try:
-                        api_response=ast.literal_eval(str(tracker.get_slot('api_response')))
+                        api_response=ast.literal_eval(response_var)
+                        response=app_email.send_mail("Top 10",str(cuisine_id) + " restaurants in "+location_id +".",api_response,email_id,render_html)
                 except:
                         render_html=False
-                response=app_email.send_mail("Top 10",str(cuisine_id) + " restaurants in "+location_id +".",api_response,email_id,render_html)
-                
+
                 if response != "Success":
                         dispatcher.utter_template('utter_email_not_sent', tracker)
                 else:
