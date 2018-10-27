@@ -449,6 +449,7 @@
     - slot{"cuisine": null}
     - slot{"budget": null}
     - utter_goodbye
+    - action_goodbye
     - export
 
 ## Generated Story 8093714130561034804
@@ -584,8 +585,6 @@
     - slot{"budget": "700"}
     - slot{"cuisine": "north indian"}
     - utter_get_email_confirmation
-* affirm
-    - utter_ask_send_email
 * deny
     - action_goodbye
     - slot{"location": null}
@@ -676,8 +675,6 @@
     - slot{"budget": "500"}
     - slot{"cuisine": "italian"}
     - utter_get_email_confirmation
-* affirm
-    - utter_ask_send_email
 * deny
     - action_goodbye
     - slot{"location": null}
@@ -756,6 +753,7 @@
 ## Generated Story -5036683267264705898
 * deny
     - utter_goodbye
+    - action_goodbye
 * greet
     - utter_greet
 * restaurant_search{"location": "bhopal", "budget": "700"}
@@ -824,6 +822,7 @@
     - utter_get_email_confirmation
 * deny
     - utter_goodbye
+    - action_goodbye
     - export
 
 ## Generated Story 1748430531261910883
@@ -885,6 +884,7 @@
     - utter_get_email_confirmation
 * deny
     - utter_goodbye
+    - action_goodbye
     - export
 
 
@@ -949,5 +949,6 @@
     - utter_get_email_confirmation
 * deny
     - utter_goodbye
+    - action_goodbye
     - export
 
