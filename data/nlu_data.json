@@ -3194,7 +3194,7 @@
             "start": 0,
             "end": 4,
             "value": "puna",
-            "entity": "puna"
+            "entity": "location"
           }
         ]
       },
@@ -3574,6 +3574,586 @@
         "text": "not now",
         "intent": "deny",
         "entities": []
+      },
+      {
+        "text": "Hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Looking for good restaurant",
+        "intent": "restaurant_search",
+        "entities": []
+      },
+      {
+        "text": "Hyderabad",
+        "intent": "location",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Hyderabad",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Chinese",
+        "intent": "cuisine",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Interested in Italian food at Madras for 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 14,
+            "end": 21,
+            "value": "Italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 30,
+            "end": 36,
+            "value": "Madras",
+            "entity": "location"
+          },
+          {
+            "start": 41,
+            "end": 44,
+            "value": "700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "Chinese luncheon treat at Calcutta under 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Chinese",
+            "entity": "cuisine"
+          },
+          {
+            "start": 26,
+            "end": 34,
+            "value": "Calcutta",
+            "entity": "location"
+          },
+          {
+            "start": 41,
+            "end": 44,
+            "value": "700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "Dining options in American cuisine at Mumbai below 500",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 18,
+            "end": 26,
+            "value": "American",
+            "entity": "cuisine"
+          },
+          {
+            "start": 38,
+            "end": 44,
+            "value": "Mumbai",
+            "entity": "location"
+          },
+          {
+            "start": 51,
+            "end": 54,
+            "value": "500",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "In Bhilai I am looking for Mexican food under 500",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "Bhilai",
+            "entity": "location"
+          },
+          {
+            "start": 27,
+            "end": 34,
+            "value": "Mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 46,
+            "end": 49,
+            "value": "500",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "In Lucknow looking out for South Indian food under 300",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "Lucknow",
+            "entity": "location"
+          },
+          {
+            "start": 27,
+            "end": 39,
+            "value": "South Indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 51,
+            "end": 54,
+            "value": "300",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "In Allahabad under 500 I am looking for Chinese food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "Allahabad",
+            "entity": "location"
+          },
+          {
+            "start": 19,
+            "end": 22,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 40,
+            "end": 47,
+            "value": "Chinese",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "In Jodhpur under 500 looking for Italian dining options.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "Jodhpur",
+            "entity": "location"
+          },
+          {
+            "start": 17,
+            "end": 20,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 33,
+            "end": 40,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "under 800 in Patna looking for Mexican restaurant.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "800",
+            "entity": "budget"
+          },
+          {
+            "start": 13,
+            "end": 18,
+            "value": "Patna",
+            "entity": "location"
+          },
+          {
+            "start": 31,
+            "end": 38,
+            "value": "Mexican",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "within 500 in Surat looking for good South indian food.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 14,
+            "end": 19,
+            "value": "Surat",
+            "entity": "location"
+          },
+          {
+            "start": 37,
+            "end": 49,
+            "value": "South indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "under 700 dining out Italian food joints at Calicut",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "700",
+            "entity": "budget"
+          },
+          {
+            "start": 21,
+            "end": 28,
+            "value": "Italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 44,
+            "end": 51,
+            "value": "Calicut",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "within 600 looking for American food in Ludhiana",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "600",
+            "entity": "budget"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "American",
+            "entity": "cuisine"
+          },
+          {
+            "start": 40,
+            "end": 48,
+            "value": "Ludhiana",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "Looking for Italian food under 700 at Cuttack",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 19,
+            "value": "Italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 31,
+            "end": 34,
+            "value": "700",
+            "entity": "budget"
+          },
+          {
+            "start": 38,
+            "end": 45,
+            "value": "Cuttack",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "some Mexican food restaurants within 500 at Surat",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "Mexican",
+            "entity": "cuisine"
+          },
+          {
+            "start": 37,
+            "end": 40,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 44,
+            "end": 49,
+            "value": "Surat",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "looking for American food in Bhopal",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 20,
+            "value": "American",
+            "entity": "cuisine"
+          },
+          {
+            "start": 29,
+            "end": 35,
+            "value": "Bhopal",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "luncheon options for mex food in Madras",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 21,
+            "end": 24,
+            "value": "mex",
+            "entity": "cuisine"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Madras",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "lunch treat of Italian food in Guwahati",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 22,
+            "value": "Italian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 31,
+            "end": 39,
+            "value": "Guwahati",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "dining out North Indian food in Bengaluru",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "North Indian",
+            "entity": "cuisine"
+          },
+          {
+            "start": 32,
+            "end": 41,
+            "value": "Bengaluru",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "at Ahmedabad good hotel for 2 under 500",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "Ahmedabad",
+            "entity": "location"
+          },
+          {
+            "start": 36,
+            "end": 39,
+            "value": "500",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "In Durg looking for great party food under 700",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "Durg",
+            "entity": "location"
+          },
+          {
+            "start": 43,
+            "end": 46,
+            "value": "700",
+            "entity": "budget"
+          }
+        ]
+      },
+      {
+        "text": "At Chennai looking for North Indian restaurant",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "Chennai",
+            "entity": "location"
+          },
+          {
+            "start": 23,
+            "end": 35,
+            "value": "North Indian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "In Bangalore looking for American food options.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "Bangalore",
+            "entity": "location"
+          },
+          {
+            "start": 25,
+            "end": 33,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "At Puna looking for Italian food",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "Puna",
+            "entity": "location"
+          },
+          {
+            "start": 20,
+            "end": 27,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Under 1000 looking for American food.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 10,
+            "value": "1000",
+            "entity": "budget"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Within 500 good mex dining out locations.",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "value": "mex",
+            "entity": "cuisine"
+          }
+        ]
+      },
+      {
+        "text": "Under 500 good veg restaurant in Dilli",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "value": "Dilli",
+            "entity": "location"
+          }
+        ]
+      },
+      {
+        "text": "within 600 awesome restaurant at Mumbai",
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "600",
+            "entity": "budget"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Mumbai",
+            "entity": "location"
+          }
+        ]
       }
     ],
     "regex_features": [

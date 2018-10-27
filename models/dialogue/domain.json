@@ -3,14 +3,13 @@
     "intent_greet",
     "intent_affirm",
     "intent_deny",
-    "intent_goodbyes",
+    "intent_goodbye",
     "intent_restaurant_search",
     "intent_send_email",
     "intent_budget",
     "intent_location",
     "intent_cuisine",
-    "intent_reenter_cuisine",
-    "intent_reenter_location",
+    "intent_default",
     "entity_location",
     "entity_cuisine",
     "entity_email",
@@ -30,6 +29,7 @@
     "prev_utter_goodbye",
     "prev_utter_default",
     "prev_utter_deny",
+    "prev_utter_restart",
     "prev_utter_affirm",
     "prev_utter_ask_howcanhelp",
     "prev_utter_ask_location",
@@ -39,7 +39,6 @@
     "prev_utter_get_email_confirmation",
     "prev_action_restaurant",
     "prev_action_send_email",
-    "prev_action_validate_cuisine",
-    "prev_action_validate_location"
+    "prev_action_goodbye"
   ]
 }

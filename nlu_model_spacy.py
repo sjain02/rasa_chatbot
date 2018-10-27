@@ -15,7 +15,7 @@ def train_nlu(config_data):
         training_data = load_data(config_data["data"])
         trainer = Trainer(config.load('./config_spacy.json'), builder)
         trainer.train(training_data)
-        model_directory = trainer.persist(config_data["path"], fixed_model_name = 'restaurantnlu')
+        trainer.persist(config_data["path"], fixed_model_name = 'restaurantnlu')
 
 
 def run_nlu(config_data):

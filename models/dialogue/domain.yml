@@ -4,6 +4,7 @@ action_names:
 - utter_goodbye
 - utter_default
 - utter_deny
+- utter_restart
 - utter_affirm
 - utter_ask_howcanhelp
 - utter_ask_location
@@ -13,13 +14,13 @@ action_names:
 - utter_get_email_confirmation
 - action_restaurant
 - action_send_email
-- action_validate_cuisine
-- action_validate_location
+- action_goodbye
 actions:
 - utter_greet
 - utter_goodbye
 - utter_default
 - utter_deny
+- utter_restart
 - utter_affirm
 - utter_ask_howcanhelp
 - utter_ask_location
@@ -29,8 +30,7 @@ actions:
 - utter_get_email_confirmation
 - actions.ActionSearchRestaurants
 - actions.ActionSendEmail
-- actions.ActionValidateCuisine
-- actions.ActionValidateLocation
+- actions.ActionGoodBye
 config:
   store_entities_as_slots: true
 entities:
@@ -42,14 +42,13 @@ intents:
 - greet
 - affirm
 - deny
-- goodbyes
+- goodbye
 - restaurant_search
 - send_email
 - budget
 - location
 - cuisine
-- reenter_cuisine
-- reenter_location
+- default
 slots:
   api_response:
     initial_value: null
@@ -91,6 +90,7 @@ templates:
   - text: okie
   - text: yeah
   - text: yes
+  - text: dosend
   utter_ask_budget:
   - buttons:
     - payload: <300
@@ -132,16 +132,17 @@ templates:
   - text: no
   - text: nope
   - text: nah
+  - text: notnow
   utter_email_not_sent:
   - text: Sorry! I am currently unable to send mail to {email}
   utter_email_sent:
   - text: Email successfuly sent at {email}
   utter_get_email_confirmation:
   - buttons:
-    - payload: yes
-      title: Yes
-    - payload: No
-      title: No
+    - payload: dosend
+      title: Do Send
+    - payload: notnow
+      title: Not now
     text: May I send top 10 restaurant list to your email?
   utter_goodbye:
   - text: goodbye :)
@@ -152,4 +153,6 @@ templates:
   - text: Hi, How can I help you!
   - text: Hey, How is it going. How May I help you Today
   utter_noService:
-  - text: Sorry! We do not operate in that area yet
+  - text: Sorry! We do not operate in that area yet. Please enter new location.
+  utter_restart:
+  - text: ''

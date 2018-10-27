@@ -16,7 +16,6 @@ if config_status[0]:
 							config_loader.get_slack_config()['bot_ver_token'], # bot verification token
 							config_loader.get_slack_config()['slack_ver_token'], # slack verification token
 							True)
-# input_channel = SlackInput('xoxb-459797226497-460406157730-nOJOlL4XqIDaq5xl3NlZPg6V')
 	agent.handle_channel(HttpInputChannel(5014, '/', input_channel))
 else:
 	print(config_status[1])
