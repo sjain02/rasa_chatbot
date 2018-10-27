@@ -122,20 +122,17 @@ class Validation_Utilities():
         def ValidateLocation(self, dispatcher, tracker):
                 validation_status=True
                 loc = tracker.get_slot('location')
-                print(loc)
                 if loc!=None:
                         with open('./data/lookup/syn_location.json') as json_file:
                                 json_loc=json.load(json_file)
                         if json_loc.get(str(loc).lower())!=None:
                                 loc_value=json_loc.get(str(loc).lower())
-                                print(loc_value)
                                 loc=loc_value
                                 tracker.update(SlotSet("location",loc_value))
                         with open('./data/lookup/locations.txt','r') as lookup:
                                 city_lookuplist=lookup.read().splitlines()
                                 city_lookuplist=[x.lower() for x in city_lookuplist]
-                        print(loc)
-                        print(city_lookuplist)
+                        
                         if loc not in city_lookuplist:
                                         validation_status= False
                         else:
