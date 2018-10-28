@@ -18,3 +18,7 @@
     - Restaurant locality address
     - Average budget for two people
     - Zomato user rating
+
+* rasa stack version used:-
+    - rasa_nlu == 0.12.3
+    - rasa_core == 0.10.1

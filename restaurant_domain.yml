@@ -94,10 +94,10 @@ templates:
   utter_get_email_confirmation:
       - text: "May I send top 10 restaurant list to your email?"
         buttons:
-        - title: "Do Send"
-          payload: "dosend"
-        - title: "Not now"
-          payload: "notnow"
+        - title: "Yes please"
+          payload: "yes"
+        - title: "No please"
+          payload: "no"
   utter_ask_send_email:
     - text: "Please provide an email id!"
   utter_email_not_sent:

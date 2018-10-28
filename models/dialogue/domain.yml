@@ -139,10 +139,10 @@ templates:
   - text: Email successfuly sent at {email}
   utter_get_email_confirmation:
   - buttons:
-    - payload: dosend
-      title: Do Send
-    - payload: notnow
-      title: Not now
+    - payload: yes
+      title: Yes please
+    - payload: no
+      title: No please
     text: May I send top 10 restaurant list to your email?
   utter_goodbye:
   - text: goodbye :)

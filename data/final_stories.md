@@ -48,7 +48,7 @@
 * restaurant_search
     - action_restaurant
 
-## Story -verfied Happy path sending email
+## Story -verified Happy path sending email
 * greet
     - utter_greet
 * restaurant_search{"location": "hyd"}
@@ -95,7 +95,7 @@
     - utter_goodbye
     - export
 
-## Story verfieid invalid cuisine correction mail sent
+## Story verified invalid cuisine correction mail sent
 * greet
     - utter_greet
 * restaurant_search{"cuisine": "north indian", "location": "erode"}

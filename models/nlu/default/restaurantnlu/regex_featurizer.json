@@ -12,6 +12,10 @@
         "pattern": "hey[^\\s]*"
     },
     {
+        "name": "restaurant_search",
+        "pattern": "((?i)(restaurant|restaurants|eat|food|dine|lunch))"
+    },
+    {
         "name": "zipcode",
         "pattern": "[0-9]{6}"
     }

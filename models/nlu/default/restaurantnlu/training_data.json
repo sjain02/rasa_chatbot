@@ -1097,6 +1097,66 @@
         "text": "what is the budget you are looking ?"
       },
       {
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "1200",
+            "entity": "budget"
+          }
+        ],
+        "text": "1200"
+      },
+      {
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 2,
+            "value": "100",
+            "entity": "budget"
+          }
+        ],
+        "text": "100"
+      },
+      {
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "700",
+            "entity": "budget"
+          }
+        ],
+        "text": "700"
+      },
+      {
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "150",
+            "entity": "budget"
+          }
+        ],
+        "text": "150"
+      },
+      {
+        "intent": "budget",
+        "entities": [
+          {
+            "start": 0,
+            "end": 3,
+            "value": "550",
+            "entity": "budget"
+          }
+        ],
+        "text": "550"
+      },
+      {
         "intent": "restaurant_search",
         "text": "in what location"
       },
@@ -1937,6 +1997,10 @@
       {
         "intent": "default",
         "text": "movie"
+      },
+      {
+        "intent": "default",
+        "text": "movies"
       },
       {
         "intent": "default",
@@ -3035,7 +3099,7 @@
             "start": 0,
             "end": 4,
             "value": "puna",
-            "entity": "puna"
+            "entity": "location"
           }
         ],
         "text": "puna"
@@ -3903,6 +3967,96 @@
           }
         ],
         "text": "In Bangalore looking for American food options."
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 7,
+            "value": "Puna",
+            "entity": "location"
+          },
+          {
+            "start": 20,
+            "end": 27,
+            "value": "Italian",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "At Puna looking for Italian food"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 10,
+            "value": "1000",
+            "entity": "budget"
+          },
+          {
+            "start": 23,
+            "end": 31,
+            "value": "American",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Under 1000 looking for American food."
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 16,
+            "end": 19,
+            "value": "mex",
+            "entity": "cuisine"
+          }
+        ],
+        "text": "Within 500 good mex dining out locations."
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 6,
+            "end": 9,
+            "value": "500",
+            "entity": "budget"
+          },
+          {
+            "start": 33,
+            "end": 38,
+            "value": "Dilli",
+            "entity": "location"
+          }
+        ],
+        "text": "Under 500 good veg restaurant in Dilli"
+      },
+      {
+        "intent": "restaurant_search",
+        "entities": [
+          {
+            "start": 7,
+            "end": 10,
+            "value": "600",
+            "entity": "budget"
+          },
+          {
+            "start": 33,
+            "end": 39,
+            "value": "Mumbai",
+            "entity": "location"
+          }
+        ],
+        "text": "within 600 awesome restaurant at Mumbai"
       }
     ],
     "regex_features": [
@@ -3917,6 +4071,10 @@
       {
         "name": "greet",
         "pattern": "hey[^\\s]*"
+      },
+      {
+        "name": "restaurant_search",
+        "pattern": "((?i)(restaurant|restaurants|eat|food|dine|lunch))"
       },
       {
         "name": "zipcode",

@@ -316,7 +316,7 @@
       },
       {
         "text": "Chinese",
-        "intent": "",
+        "intent": "cuisine",
         "entities": [
           {
             "start": 0,
@@ -4219,6 +4219,21 @@
             "entity": "location"
           }
         ]
+      },
+      {
+        "text": "not now",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "yes please",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "please send",
+        "intent": "affirm",
+        "entities": []
       }
     ],
     "regex_features": [

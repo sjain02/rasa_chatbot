@@ -2,30 +2,30 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "cuisine",
+        "email",
         "cuisine_key",
+        "cuisine",
         "city_id",
+        "lat",
         "location",
         "budget",
-        "lat",
         "api_response",
-        "email",
         "lon"
       ]
     },
     "action_restaurant": {
       "slots": [
-        "cuisine",
-        "budget",
+        "api_response",
         "location",
-        "api_response"
+        "budget",
+        "cuisine"
       ]
     },
     "action_send_email": {
       "slots": [
-        "budget",
-        "location",
         "email",
+        "location",
+        "budget",
         "cuisine"
       ]
     },
@@ -34,10 +34,10 @@
     },
     "action_goodbye": {
       "slots": [
-        "budget",
+        "api_response",
         "location",
-        "cuisine",
-        "api_response"
+        "budget",
+        "cuisine"
       ]
     },
     "utter_greet": {
