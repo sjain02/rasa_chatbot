@@ -286,6 +286,7 @@
         "text": "Italian"
       },
       {
+        "intent": "cuisine",
         "entities": [
           {
             "start": 0,
@@ -4057,6 +4058,18 @@
           }
         ],
         "text": "within 600 awesome restaurant at Mumbai"
+      },
+      {
+        "intent": "deny",
+        "text": "not now"
+      },
+      {
+        "intent": "affirm",
+        "text": "yes please"
+      },
+      {
+        "intent": "affirm",
+        "text": "please send"
       }
     ],
     "regex_features": [

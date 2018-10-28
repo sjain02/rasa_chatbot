@@ -3,44 +3,47 @@
     "action_listen": {
       "slots": [
         "email",
-        "cuisine_key",
-        "cuisine",
-        "city_id",
-        "lat",
-        "location",
         "budget",
+        "lat",
+        "lon",
+        "cuisine",
+        "location",
         "api_response",
-        "lon"
+        "cuisine_key",
+        "city_id"
       ]
     },
     "action_restaurant": {
       "slots": [
-        "api_response",
-        "location",
         "budget",
-        "cuisine"
+        "api_response",
+        "cuisine",
+        "location"
       ]
     },
-    "action_send_email": {
+    "action_goodbye": {
       "slots": [
-        "email",
-        "location",
         "budget",
+        "api_response",
+        "location",
         "cuisine"
       ]
     },
     "utter_goodbye": {
       "slots": []
     },
-    "action_goodbye": {
+    "action_send_email": {
       "slots": [
-        "api_response",
-        "location",
         "budget",
+        "email",
+        "location",
         "cuisine"
       ]
     },
     "utter_greet": {
+      "slots": []
+    },
+    "utter_default": {
       "slots": []
     }
   },
