@@ -22,3 +22,5 @@
 * rasa stack version used:-
     - rasa_nlu == 0.12.3
     - rasa_core == 0.10.1
+
+* You tube link for slack - https://youtu.be/lXV5og1XSYU
